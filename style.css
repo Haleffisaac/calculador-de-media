@@ -10,23 +10,33 @@ body {
   align-items: center;
   height: 100vh;
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
-  background-color: #c9e4ff;
+  background: linear-gradient(135deg, #72c6ef, #e5e5e5);
   color: #333;
 }
 
 form {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribui o espaço entre os elementos */
+  align-items: flex-start; /* Alinha os itens no topo */
   gap: 1.5rem;
-  background-color: #fff;
-  width: 80vw;
-  max-width: 400px;
+  background-color: #ffffff;
+  width: 90vw;
+  max-width: 900px; /* Largura máxima aumentada */
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  border: 2px solid #fcff33;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ff7e50;
+  transition: transform 0.2s ease;
+}
+
+form:hover {
+  transform: scale(1.02);
+}
+
+.input-container {
+  flex: 1; /* Permite que o container do input ocupe espaço disponível */
+  min-width: 250px; /* Largura mínima para cada campo */
 }
 
 input {
@@ -35,13 +45,13 @@ input {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input:focus {
   outline: none;
-  border-color: #fcff33;
-  box-shadow: 0 0 5px #fcff33;
+  border-color: #ff7e50;
+  box-shadow: 0 0 5px rgba(255, 126, 80, 0.5);
 }
 
 label {
@@ -55,22 +65,31 @@ button {
   padding: 0.75rem 2.5rem;
   border-radius: 30px;
   border: none;
-  background-color: #c9e4ff;
-  color: #fff;
+  background-color: #ff7e50;
+  color: #ffffff;
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  width: 100%; /* Faz o botão ocupar a largura total em telas pequenas */
 }
 
 button:hover {
-  background-color: #fcff33;
+  background-color: #ff6a00;
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px #fcff33;
+  box-shadow: 0 5px 15px rgba(255, 106, 0, 0.5);
 }
 
 p {
   font-size: 1.2rem;
   color: #333;
   font-weight: 500;
+  width: 100%; /* Faz o parágrafo ocupar a largura total */
+}
+
+/* Estilo responsivo para telas menores */
+@media (max-width: 600px) {
+  input {
+    width: 100%; /* Em telas menores, os inputs ocupam a largura total */
+  }
 }
