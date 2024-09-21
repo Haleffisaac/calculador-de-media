@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Calculador de Média</title>
+</head>
+<body>
+  <form action="javascript:void(0);">
+    <h2 style="color: #555">Vamos calcular sua média escolar (EM)</h2>
+    <label for="in1">Primeira Nota</label>
+    <input type="number" name="in1" id="in1" placeholder="Primeira nota" max="10" min="0">
+    <label for="in2">Segunda Nota</label>
+    <input type="number" name="in2" id="in2" placeholder="Segunda nota" max="10" min="0">
+    <label for="in3">Terceira Nota</label>
+    <input type="number" name="in3" id="in3" placeholder="Terceira nota" max="10" min="0">
+    <label for="in4">Quarta Nota</label>
+    <input type="number" name="in4" id="in4" placeholder="Quarta nota" max="10" min="0">
+    <button type="button" onclick="calcularNota()">Calcular resultado</button>
+    <p id="resultado"></p>
+  </form>
+</body>
+<script src="script.js"></script>
+</html>
